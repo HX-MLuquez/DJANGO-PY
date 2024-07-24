@@ -1,6 +1,9 @@
 
 # Curso Python - Django 2024
 
+```bash
+git clone https://github.com/HX-MLuquez/DJANGO-PY.git
+```
 
 ### Comandos GIT + Importantes
 

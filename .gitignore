@@ -9,6 +9,9 @@ node_modules/
 *.pptx
 *.pdf
 
+*.zip
+*.mp4
+
 # Ignorar documentos de Word
 *.doc
 *.docx

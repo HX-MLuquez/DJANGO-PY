@@ -1,23 +1,53 @@
 --* Script PostgreSQL
-
+-- Datos Semillas - Migrar data
 -- Llevar data a migrar a un path simple (corto)
 -- Ejecutar
 -- \i C:/Temp/script_clientes_productos.sql;
 --! La barra \ en windows en las rutas se recomienda cambiar a /
+-- 1 Copiar path -> C:\Users\mauuu\OneDrive\Escritorio\DJANGO-PY 2024\MODELO-DB-SQL\DB.sql
+-- 2 en Windows cambiar la barra \ a barra /
+-- 3 ver de que los nombres de las carpetas no contengan acentos ni caracteres raros como ñ
+-- 4 aplicar el import sobre la db creada (ya conectados en nuestra db)
+-- 5 de tener algun nombre de carpeta con espacio le ponemos comillas simples
+-- \i 'C:/Users/mauuu/OneDrive/Escritorio/DJANGO-PY 2024/MODELO-DB-SQL/DB.sql'
+-- \i C:/script/DB.sql 
+
+-- De no funcionar podemos simplemente copiar todo esto y pegar en nuestra sql shell (previo estar conectados a nuestra db)
+
+-- Desde la CMD 
+-- C:\Windows\System32>psql -U postgres -d citas_medicas -f C:/Users/mauuu/OneDrive/Escritorio/"DJANGO-PY 2024"/MODELO-DB-S
+-- QL/DB.sql
+-- Contraseña para usuario postgres:
 
 -- Eliminar tablas si existen (con CASCADE si hay dependencias)
-DROP TABLE IF EXISTS Citas CASCADE;
-DROP TABLE IF EXISTS Agendas CASCADE;
-DROP TABLE IF EXISTS CentroMedico CASCADE;
-DROP TABLE IF EXISTS Especialistas CASCADE;
-DROP TABLE IF EXISTS Usuarios CASCADE;
-DROP TABLE IF EXISTS Contactos CASCADE;
+DROP DATABASE IF EXISTS citas_medicas;
 
+SET CLIENT_ENCODING TO 'UTF8';
 -- Crear base de datos
-CREATE DATABASE citas_medicas;
 
--- Conectarse a la base de datos
+-- export PGCLIENTENCODING=UTF8 -- este comando en \i no corre
+
+-- Implementar LC_COLLATE LC_CTYPE para manejo correcto de los acentos
+-- CREATE DATABASE citas_medicas;
+-- LC_COLLATE='en_US.UTF-8' --! para manejo de error del IMPORT - pero no lo soluciona
+-- LC_CTYPE='en_US.UTF-8'
+-- ENCODING='UTF8'
+-- TEMPLATE=template0;
+
+\encoding UTF8
+
+-- Crear la base de datos
+DROP DATABASE IF EXISTS citas_medicas;
+CREATE DATABASE citas_medicas
+    WITH ENCODING 'UTF8'
+    LC_COLLATE='en_US.UTF-8'
+    LC_CTYPE='en_US.UTF-8'
+    TEMPLATE template0;
+
+-- Conectarse a la base de datos recién creada
 \c citas_medicas;
+
+-- Crear las tablas
 
 -- Crear tabla Contactos
 CREATE TABLE Contactos (
@@ -66,8 +96,17 @@ CREATE TABLE Citas (
     mensaje TEXT
 );
 
-
 -- Insertar datos semilla
+
+-- Insertar en Especialistas
+INSERT INTO Especialistas (nombre, especialidad) VALUES
+('Dr. Luis Martínez', 'Cardiología'),
+('Dra. María López', 'Dermatología');
+
+-- Insertar en CentroMedico
+INSERT INTO CentroMedico (nombre, direccion) VALUES
+('Hospital Central', 'Calle Falsa 123'),
+('Clínica de Especialidades', 'Avenida Siempre Viva 456');
 
 -- Insertar en Contactos
 INSERT INTO Contactos (nombre, email, mensaje) VALUES
@@ -80,16 +119,6 @@ INSERT INTO Usuarios (email, password, tipo_usuario) VALUES
 ('usuario2@example.com', 'password456', 'paciente'),
 ('admin@example.com', 'adminpass', 'admin');
 
--- Insertar en Especialistas
-INSERT INTO Especialistas (nombre, especialidad) VALUES
-('Dr. Luis Martínez', 'Cardiología'),
-('Dra. María López', 'Dermatología');
-
--- Insertar en CentroMedico
-INSERT INTO CentroMedico (nombre, direccion) VALUES
-('Hospital Central', 'Calle Falsa 123'),
-('Clínica de Especialidades', 'Avenida Siempre Viva 456');
-
 -- Insertar en Agendas
 INSERT INTO Agendas (fecha_disponible, hora_disponible, especialista_id, centro_medico_id) VALUES
 ('2024-08-01', '09:00:00', 1, 1),
@@ -99,3 +128,11 @@ INSERT INTO Agendas (fecha_disponible, hora_disponible, especialista_id, centro_
 INSERT INTO Citas (agenda_id, usuario_id, mensaje) VALUES
 (1, 1, 'Primera consulta de cardiología.'),
 (2, 2, 'Revisión dermatológica.');
+
+-- Verificar el contenido de las tablas
+SELECT * FROM Especialistas;
+SELECT * FROM Usuarios;
+SELECT * FROM Citas;
+SELECT * FROM agendas;
+
+\dt

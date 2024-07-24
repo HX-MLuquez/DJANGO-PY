@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inputs</title>
+    <style>
+      .bgred {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="title">
+      <!-- pasa a esto al tocar el bbtn -> <header id="title" class="bgred"> -->
+      <h1>Tareas</h1>
+    </header>
+    <section>
+      <label>Ingresar tarea</label>
+      <input type="text" name="init" id="init" />
+      <button id="bttn">Agregar tarea</button>
+    </section>
+    <section>
+      <h2>Lista de tareas</h2>
+      <ul id="list">
+        <li>Jugar chess</li>
+      </ul>
+    </section>
+    <div class="parra">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore
+        nesciunt soluta placeat obcaecati quisquam veniam quia quos voluptates?
+        Quaerat quam iure maxime nisi hic vitae voluptas quis adipisci
+        perferendis facere!
+      </p>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      var title = document.getElementById("title"); // <- header
+
+      var bttn = document.getElementById("bttn");
+      var list = document.getElementById("list"); // <- <ul id="list">
+
+      function addTask() {
+        var init = document.getElementById("init").value;
+        var li = document.createElement("li");
+
+        li.innerHTML = init;
+
+        list.appendChild(li); // <- el element viaja al DOM
+
+        console.log("dentro de la function addTask y viendo a li -> ", li);
+
+        document.getElementById("init").value = "";
+
+        title.className = "bgred";
+
+        var parra = document.getElementsByClassName("parra");
+        console.log("PARRA ->", parra);
+        parra[0].style = "background-color: green";
+      }
+
+      bttn.addEventListener("click", addTask);
+
+      console.log("bttn es --> ", bttn);
+
+      // var jorge = document.getElementById("jorge");
+
+      // function pisarTextDentroMismaEtiqueta(){
+      //   var init = document.getElementById("init").value;
+      //   var jorge = document.getElementById("jorge")
+      //   jorge.innerHTML = jorge.innerHTML + " " + init
+      // }
+      // bttn.addEventListener("click", pisarTextDentroMismaEtiqueta);
+    </script>
+  </body>
+</html>

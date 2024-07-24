@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suricata</title>
+    <!-- 1° BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <!-- 2° NUESTRO CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- 3° FUENTES GOOGLE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 4° ICONOS - FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/2c5c5ede0e.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- METAs ADICIONALES -->
+    <meta name="author" content="Mauro" />
+    <meta
+      name="description"
+      content="Es una app donde trabajamos filosofía MOVIL FIRST con bootstrap"
+    />
+    <meta name="keywords" content="app, movil, responsive,comida" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid sm-row">
+          <a class="navbar-brand col-sm-2" href="#"
+            ><img src="./assets/img/logo.png" alt="logo suricata"
+          /></a>
+          <div class="col-sm-6"></div>
+          <button
+            class="navbar-toggler col-sm-4"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse col-sm-4" id="navbarNav">
+            <!-- Para llevar estos button al END (derecha)
+          <ul class="navbar-nav sm-auto"> -->
+
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <h1>Nuestros Productos</h1>
+    </header>
+
+    <main>
+      <section class="container row" id="productos">
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/img/colaciones.jpg"
+            class="card-img-top"
+            alt="img de colaciones"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Colaciones</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/img/desayunos.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Desayunos</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./assets/img/bebidas.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Bebidas</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./assets/img/verduras.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Verduras</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img src="./assets/img/dulces.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Dulces</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem">
+          <img
+            src="./assets/img/empanadas.jpg"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Empanadas</h5>
+            <p class="card-text">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo.
+            </p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Morbi leo risus</li>
+            <li class="list-group-item">Porta ac consectetur ac</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Ver más</a>
+            <a href="#" class="card-link">Comprar</a>
+          </div>
+        </div>
+      </section>
+      <section class="container-two d-none d-sm-block">
+        <div class="ico">
+          <div class="title"><h2>Ahora aceptamos</h2></div>
+          <div class="ico-img row">
+            <!-- 
+● cc-visa.
+● cc-mastercard.
+● cc-amex.
+● cc-diners-club.
+● cc-paypal.
+● cc-discover. -->
+            <div class="col-2"><i class="fa-brands fa-cc-visa"></i></div>
+            <div class="col-2"><i class="fa-brands fa-cc-mastercard"></i></div>
+            <div class="col-2"><i class="fa-brands fa-cc-amex"></i></div>
+            <div class="col-2"><i class="fa-brands fa-cc-diners-club"></i></div>
+            <div class="col-2"><i class="fa fa-cc-paypal" aria-hidden="true"></i></div>
+            <div class="col-2"><i class="fa fa-cc-discover" aria-hidden="true"></i></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <img src="./assets/img/logo-footer.png" alt="logo footer" />
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

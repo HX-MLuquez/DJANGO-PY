@@ -1,0 +1,99 @@
+body{
+    background-color: brown;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(250, 247, 122);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#fede{
+    color: chocolate;
+    background-color: beige;
+}
+h1{
+    color: yellow;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(124, 78, 180);
+}
+
+.pepe{
+    background-color: blueviolet;
+}
+.juan{
+    background-color: blue;
+}
+h4{
+    background-color: chartreuse;
+}
+
+div{
+    background-color: black;
+}
+
+div{
+    background-color: pink;
+}
+
+
+p{
+    color: black;
+    text-align:justify
+}
+
+.container-text{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-text p{
+    background-color: white;
+}
+
+.www{
+    background-color: green;
+}
+
+p{
+    background-color: rgb(226, 13, 209) ;
+}
+#queraro{
+    background-color: aqua;
+}
+
+p{
+    background-color: black;
+}
+
+
+/* CASCADA */
+/* pero siempre y cuando no haya algo + ESPECIFICO
+pero siempre y cuando no haya algo + de mayor IMPORTANCIA */
+
+/* ORDEN de IMPORTANCIA para el NAVEGADOR INTERPRETAR CSS
+
+# ID 
+ . CLASS 
+   etiquetas <> */
+
+
+   /* !important
+   ELIMINA TODA JERARQUIA y toma donde esta el important como principal */
+
+
+/* 
+   !important
+   #id{}
+   .class{}
+   lo específico .class p{}
+                 #id p{}
+    Etiqueta
+    CASCADA
+    (donde lo de más abajo es lo que toma) 
+
+
+    ANIDAMIENTO
+*/

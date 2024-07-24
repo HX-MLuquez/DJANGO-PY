@@ -1,0 +1,74 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --text-gray-color: #212529;
+  --text-white-color: #ffffff;
+  --bg-color-pink: #e83e8c;
+  --info-color: #17a2b8;
+}
+
+/* Weight:
+● Open Sans Regular (400).
+● Open Sans Bold (700).
+Colores:
+● #212529;
+● #ffffff o var(--white);
+● #e83e8c o var(--pink);
+● #17a2b8 o var(--info); */
+
+.navbar {
+  background-color: var(--bg-color-pink);
+}
+.footer {
+  background-color: var(--bg-color-pink);
+}
+.navbar-brand img {
+  height: 3.5rem;
+}
+header h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 6rem;
+  font-weight: var(--weight-bold);
+  color: #707070;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column
+}
+.container {
+  justify-content: center;
+}
+
+.card {
+  margin: 1rem;
+  padding: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer img {
+  height: 5.5rem;
+  padding: 1rem;
+}
+
+.container-two{
+  background-color: var(--info-color);
+  color: var(--text-white-color);
+}
+.ico{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+

@@ -1,0 +1,5 @@
+{"nombre": "Producto A", "precio": 20}
+{"nombre": "Producto B", "precio": 30}
+{"nombre": "Producto C", "precio": 25}
+{"nombre": "Producto D", "precio": 15
+{"nombre": "Producto E", "precio": 40}

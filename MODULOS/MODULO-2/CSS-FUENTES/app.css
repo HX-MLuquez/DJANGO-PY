@@ -1,0 +1,17 @@
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+h1 {
+  /* font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif; */
+  font-size: 3em;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.fuente-em{
+  background-color: yellowgreen;
+  padding: 8px;
+  /* width: 20px;
+  height: 20px; */
+}

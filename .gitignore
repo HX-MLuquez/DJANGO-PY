@@ -1,0 +1,54 @@
+# Ignorar archivos de sistema
+.DS_Store
+
+# Ignorar directorios y archivos de dependencias
+node_modules/
+
+# Ignorar archivos de presentación
+*.ppt
+*.pptx
+*.pdf
+
+# Ignorar documentos de Word
+*.doc
+*.docx
+
+# Ignorar videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Ignorar audios
+*.mp3
+*.wav
+*.aac
+
+# Ignorar directorio de Git (para evitar casos raros)
+.git/
+
+# Ignorar otros archivos y directorios comunes
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignorar archivos de configuración específicos de IDEs y editores
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar archivos de caché
+*.cache
+*.tmp
+
+# Ignorar archivos de build
+/dist/
+/build/
+
+# Ignorar archivos de sistema de archivos
+*.DS_Store
+
+__pycache__/
+__pycache__

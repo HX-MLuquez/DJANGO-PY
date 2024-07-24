@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to jQuery</title>
+  </head>
+  <body>
+    <h1>Hola mundo jQuery</h1>
+    <p id="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing</p>
+
+    <button id="bttn">Tocar</button>
+    <!-- 1° SCRIPT jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 2° NUESTRO SCRIPT <- así debe ser siempre -->
+    <script>
+    //   var parrafo = $("#parrafo");
+
+    //   parrafo.text("Hola hola hola");
+
+      function pocho() {
+        alert("que buen alert!!!");
+      }
+
+      $("#bttn").click(pocho);
+
+      // $("#bttn2").click(pocho);
+
+      $("p").dblclick(function () {
+        $(this).hide();
+      });
+
+      //   $("#bttn").click(function () {
+      //     alert("que buen alert!!!");
+      //   });
+
+      //   $("#bttn2").click(function () {
+      //     alert("que buen alert!!!");
+      //   });
+    </script>
+  </body>
+</html>

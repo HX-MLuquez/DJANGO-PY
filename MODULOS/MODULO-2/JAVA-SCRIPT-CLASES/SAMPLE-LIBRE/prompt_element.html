@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prompt + get element</title>
+  </head>
+  <body>
+    <h1>PROMPT + ELEMENT</h1>
+    <h2>Nombre</h2>
+    <h3 id="nombre"></h3>
+    <h2>Apellido</h2>
+    <h3 id="apellido"></h3>
+
+    <script>
+        var nombre = document.getElementById("nombre") // <- <h3 id="nombre"></h3>
+        var apellido = document.getElementById("apellido") // <- <h3 id="apellido"></h3>
+
+        nombre.innerHTML = prompt("Ingresar nombre")
+        console.log("nombre es --> ", nombre)
+
+        apellido.innerHTML = prompt("Ingresar apellido")
+    </script>
+  </body>
+</html>

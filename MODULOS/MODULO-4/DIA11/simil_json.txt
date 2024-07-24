@@ -1,0 +1,3 @@
+{"nombre": "tv", "precio": 102}
+{"nombre": "celu", "precio": 23}
+{"nombre": "tablet", "precio": 144}

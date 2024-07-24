@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display example</title>
+    <style>
+      .dev {
+        background-color: green;
+        margin: 4px;
+        height: 50px;
+        width: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span style="background-color: yellow; display: block"
+        >Este es un span block</span
+      >
+      <span style="background-color: rgb(0, 255, 0); display: block"
+        >Este es otro span block</span
+      >
+      <span style="background-color: rgb(255, 0, 170); display: inline"
+        >Este es un span en línea</span
+      >
+      <span style="background-color: rgb(93, 0, 255); display: inline"
+        >Este es otro span en línea</span
+      >
+    </div>
+    <div>
+      <span
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 128, 0);
+          display: inline-block;
+        "
+        >Este es un span en línea</span
+      >
+      <span
+        style="
+          width: 100px;
+          height: 100px;
+          background-color: rgb(255, 60, 0);
+          display: inline-block;
+        "
+        >Este es otro span en línea</span
+      >
+
+      <div class="dev">1</div>
+      <div class="dev">2</div>
+      <div class="dev">3</div>
+      <div class="dev">4</div>
+      <div class="dev" style="display: inline">5</div>
+      <div class="dev" style="display: inline">6</div>
+      <div class="dev">7</div>
+      <div class="dev">8</div>
+      <div id="conectar"></div>
+    </div>
+    <script>
+      var conectando = document.getElementById("conectar");
+      console.log("conectando ---> ", conectando);
+      
+      var h1 = document.createElement("h1")
+      h1.innerHTML = "Hola soy el texto dentro de H1"
+
+      conectando.appendChild(h1)
+
+    </script>
+  </body>
+</html>

@@ -77,6 +77,15 @@
 - b) Una tabla virtual que se crea a partir de una o varias tablas existentes
 - c) Un conjunto de reglas que se aplican a una tabla
 - d) Un conjunto de comandos SQL que se ejecutan juntos en una base de datos
+```sql
+-- Crear una vista que une 'empleados' con 'departamentos'
+CREATE VIEW vista_empleados_departamentos AS
+SELECT e.nombre AS empleado_nombre, d.nombre AS departamento_nombre
+FROM empleados e
+JOIN departamentos d ON e.departamento_id = d.id;
+
+SELECT * FROM vista_empleados_departamentos;
+```
 
 14. ¿Qué es una función en una base de datos? - Nosotros no los trabajamos **?**
 - a) Un conjunto de comandos SQL que se ejecutan juntos en una base de datos

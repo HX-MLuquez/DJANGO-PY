@@ -1,8 +1,19 @@
 
 # Curso Python - Django 2024
 
+CLONAR
 ```bash
 git clone https://github.com/HX-MLuquez/DJANGO-PY.git
+```
+
+Conectar con REMOTE
+```bash
+git remote add origin https://github.com/HX-MLuquez/DJANGO-PY.git
+```
+
+Para ver si estamos o no actualizados
+```bash
+git fetch origin master
 ```
 
 ### Comandos GIT + Importantes

@@ -142,3 +142,13 @@ Cambiar de rama:
 ```bash
 git checkout nombre-de-la-rama
 ```
+
+
+```
+
+
+
+```
+
+### Enlace encuesta de cada día
+https://forms.gle/m4UkmSVECYhTMQqGA

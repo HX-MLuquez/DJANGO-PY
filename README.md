@@ -6,6 +6,7 @@ CLONAR
 git clone https://github.com/HX-MLuquez/DJANGO-PY.git
 ```
 
+
 Conectar con REMOTE
 ```bash
 git remote add origin https://github.com/HX-MLuquez/DJANGO-PY.git
@@ -29,7 +30,6 @@ git status
 ```bash
 git pull origin master
 ```
-
 
 ```
 

@@ -103,3 +103,17 @@ source venv/Scripts/activate
 ```bash
 python manage.py startapp myapp
 ```
+---
+
+# CONECTAR ENTORNO VIRTUAL - SELECCIONAR INTÉRPRETE
+
+1. En el VSC Ir a view
+2. Ir a Command Palette
+3. Python Select Interpreter
+4. Si ya la reconoce la seleccionamos y sino la buscamos con Enter interpreter path
+    - Enter interpreter path:
+        - Find
+        - Abrir proyecto
+        - Abrir carpeta entorno virtual
+        - Abrir Scripts
+        - Select python.exe

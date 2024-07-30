@@ -2,8 +2,8 @@
 # Entorno Virtual
 
 ## venv
-- python -m venv env
-- source env/Scripts/activate
+- python -m venv venv
+- source venv/Scripts/activate
 - pip list
 - python --version
 - deactivate

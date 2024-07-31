@@ -23,11 +23,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k)2v8!!e00i**13h)0mrt6$bvk47v3@d55@k7$r&b12b&s^$_d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = eval(os.environ.get('DEBUG', "true"))
+#* Seteado para el uso de variables de entorno
+DEBUG = os.environ.get('DEBUG', 'True')
 
+# DEBUG = True
+
+#* SETEADO con PERMISOS permiso de dominio utilizando variable de entorno o por defecto '127.0.0.1'
 ALLOWED_HOSTS = [
     os.environ.get('APP_HOST', '127.0.0.1')
 ]
+# Configuración en Django que define una lista de dominios o direcciones IP que pueden servir tu aplicación Django.
 
 
 # Application definition
@@ -111,13 +116,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = os.environ['LANGUAGE_CODE']
 
-TIME_ZONE = os.environ['TIME_ZONE']
+#* SETEO usando Variables de Entorno
+LANGUAGE_CODE = os.environ.get('LANGUAGE_CODE', 'es')
+TIME_ZONE = os.environ.get('TIME_ZONE', 'UTC')
+
+# LANGUAGE_CODE = 'en-us'
+# TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -137,12 +145,6 @@ LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, '../locale'),
 )
 
-gettext = lambda s: s
-LANGUAGES = (
-    # ('en', gettext('English')),
-    ('es', gettext('Spanish')),
-    # ('pt', gettext('Portuguese')),
-)
 
 # whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

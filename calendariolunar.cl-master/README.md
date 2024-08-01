@@ -27,11 +27,11 @@ source venv/Scripts/activate
 ```bash
 pip install -r requirements.txt
 ```
-6. 
+6. Paso exclusivo de este Proyecto
 ``` bash
 python manage.py makemessages -v 3 --locale es
 ```
-7. 
+7. Paso exclusivo de este Proyecto
 ``` bash
 python manage.py compilemessages
 ```

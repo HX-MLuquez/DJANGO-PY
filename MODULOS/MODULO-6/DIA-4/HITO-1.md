@@ -3,19 +3,32 @@
   - Utiliza el administrador de paquetes PIP para la instalación de los componentes Django.
   - Crea la carpeta onlyflans
   - Dentro de esta crea un entorno virtual y recuerda de activar
-  - Instala Django y Crea un project con el llamado onlyflans (recuerden usar el punto al final)
+  - Instala Django 5.0.7 y Crea un project con el llamado onlyflans (recuerden usar el punto al final)
   - Probar el Proyecto ejecutando runserver
   - Preparar y migrar
   - Crear user y password del admin
   - Probar el Proyecto ejecutando runserver e ingresar como admin
   - Crear una app llamada web
+  - Armar la estructura
+    - static
+        - js
+        - css
+    - templates
+    - etc
+
+  ---
+Adicional
   - En la views.py de web crear una función de respuesta http 
   - En la urls.py del proyecto anexar la route para la función previamente creada
   - Modularizar la route creada (utilizando el include)
   - Utiliza el utilitario manage.py para la creación de un nuevo proyecto Django.
+  - .gitignore
+  - README.md - Documentación
+  - .env (variables de entorno)
+  - requirements.txt
   - Subir el proyecto a gitHub (privado)
 
-Adicional
+Resumen de Adicional
   - Crear app web
   - Crear una route + view
   - Modular la route a urls.py del project onyFlans

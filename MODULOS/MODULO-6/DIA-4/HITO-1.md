@@ -4,6 +4,7 @@
   - Crea la carpeta onlyflans
   - Dentro de esta crea un entorno virtual y recuerda de activar
   - Instala Django 5.0.7 y Crea un project con el llamado onlyflans (recuerden usar el punto al final)
+    - Ver de instalar mediante django==3.2.4 <- solamente
   - Probar el Proyecto ejecutando runserver
   - Preparar y migrar
   - Crear user y password del admin
@@ -49,3 +50,42 @@ utilizando los comandos correspondientes del archivo manage.py y accede a la url
 disponible para tu proyecto. Una vez que puedas acceder a la web en tu navegador, 
 realiza un “pantallazo” de ésta y guardalo en un archivo jpg o png dentro de la carpeta
 requerimiento3.
+
+
+---
+
+```
+
+```
+
+## DJANGO 3.2.4
+### De querer utilizar esa versión, hoy teniendo python 3 podemos tener el error:
+Falta el módulo `distutils`, el cual es necesario para que Django funcione correctamente. Este módulo solía ser parte del paquete estándar de Python, pero en las versiones más recientes, puede no estar incluido por defecto.
+
+Solucionar este problema instalando `distutils` manualmente:
+
+1. Tener el entorno virtual activado.
+2. Instalar `distutils` usando `pip` o `ensurepip`.
+
+### Opción 1: Usar `ensurepip`
+```bash
+python -m ensurepip --upgrade
+```
+
+### Opción 2: Usar `pip`
+Si `ensurepip` no funciona, intentar instalar `distutils` directamente usando `pip`:
+```bash
+pip install setuptools
+```
+
+Luego intentar nuevamente verificar la versión de Django con:
+```bash
+django-admin --version
+```
+
+
+---
+
+
+```
+```

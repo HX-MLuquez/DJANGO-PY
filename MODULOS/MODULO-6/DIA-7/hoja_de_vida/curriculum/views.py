@@ -12,7 +12,8 @@ def home(req):
     }
     return render(req, 'index.html', context)
 
-
+def acerca(req):
+    return render(req, 'about.html', {})
 # render -> template
 # HttpResponse -> text
 # JsonResponse -> json

@@ -15,20 +15,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-#* Sin Modularizar las ROUTES
-# from django.contrib import admin
-# from django.urls import path
-# from curriculum.views import hola_text, hola_json, hola_template
-
-# urlpatterns = [
-#     path('admin/', admin.site.urls),
-#     path('text/', hola_text),
-#     path('json/', hola_json),
-#     path('template/', hola_template),
-# ]
-
-
-#* MODULARIZANDO ROUTES
 from django.contrib import admin
 from django.urls import path, include
 
@@ -36,5 +22,4 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('curriculum.urls')),
-   # path('blog/', include('blog.urls')),
 ]

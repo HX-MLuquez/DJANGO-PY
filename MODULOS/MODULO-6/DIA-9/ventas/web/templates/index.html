@@ -1,36 +1,21 @@
-{% extends 'base.html' %} 
-
-{% block content %}
-{% load static %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <div class="container" id="home">
-    <h1>{{ mensaje }}</h1>
-    <hr>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-
-          {% for p in productos %}
-          <!-- <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{% static p %}"/>
-          </div> -->
-
-          <!-- <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <img src="{{u}}" alt="imgs"/>
-          </div> -->
-
-            <div class="carousel-item {% if forloop.first %}active{% endif %}">
-            <h2>{{p.name}}</h2>
-            <p>{{p.url}}</p>
-          </div> 
-          {% endfor %}
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  <h1>{{ mensaje }}</h1>
+  <hr />
+  <div id="carouselExample" class="carousel slide">
+    {% for p in productos %}
+    <div class="card" style="width: 18rem" id="mycard">
+      <img src="..." class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <a href="#" class="btn btn-primary">{{p.url}}</a>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>
 {% endblock %}

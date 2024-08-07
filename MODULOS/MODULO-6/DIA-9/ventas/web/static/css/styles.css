@@ -5,3 +5,8 @@ body{
 #barra{
     width: 100%
 }
+
+#mycard{
+    background-color: rgb(214, 214, 218);
+    border-radius: 40px;
+}

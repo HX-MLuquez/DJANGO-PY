@@ -17,11 +17,40 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
           </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"
+              >Bienvenido</a
+            >
+            <!-- <p>Contiene productos que solo ven usuarios registrados</p> -->
+          </li>
+
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/about"
               >Acerca</a
             >
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/about"
+              >Contacto</a
+            >
+            <!-- <p>Formulario para contactarnos</p> -->
+          </li>
+          {% if user.is_active %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/about"
+              >Cerrar Sesión</a
+            >
+            <!-- <p>Si el usuario ya se registró</p> -->
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/"
+              >Iniciar Sesión</a
+            >
+            <!-- <p>Si el usuario aún no se registra</p> -->
+          </li>
+          {% endif %}
         </ul>
       </div>
     </div>

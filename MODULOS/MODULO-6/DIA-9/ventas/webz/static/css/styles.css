@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(250, 183, 183);
+  margin: 20px 30px;
+}
+
+#encabezado img {
+  width: 300px;
+  height: 180px;
+  border-radius: 4px;
+}
+
+#productos {
+  background-color: rgb(240, 240, 247);
+  display: flex;
+  margin: 4px;
+  padding: 4px;
+  justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#producto img {
+  width: 300px;
+  height: 180px;
+}
+#producto {
+  background-color: rgb(218, 245, 218);
+  margin: 4px;
+  padding: 4px;
+}

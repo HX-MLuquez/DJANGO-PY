@@ -16,3 +16,7 @@ def acerca(req):
         "data": ""
     }
     return render(req, 'about.html', contex)
+
+
+# nombre = "'Mau'" # 'Mau'
+# nombre = "Mau" # Mau

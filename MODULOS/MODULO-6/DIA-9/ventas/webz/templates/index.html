@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div>
+  <h1>INDEX</h1>
+  <h2>{{mensaje}}</h2>
+  <div id="productos">
+    {% for p in productos %}
+    <div id="producto">
+        <img
+          src="https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/919838d8da6d04b4cfaa1b121eeddce2.jpg"
+          alt="producto"
+        />
+        <h3>{{p.name}}</h3>
+        <p>{{p.url}}</p>
+    </div>
+
+    {% endfor %}
+
+  </div>
+</div>
+{% endblock %}

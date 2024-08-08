@@ -17,14 +17,14 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/">Inicio</a>
           </li>
-
+          {% if user.is_active %}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/"
               >Bienvenido</a
             >
             <!-- <p>Contiene productos que solo ven usuarios registrados</p> -->
           </li>
-
+          {% endif %}
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/about"
               >Acerca</a
@@ -51,6 +51,11 @@
             <!-- <p>Si el usuario aún no se registra</p> -->
           </li>
           {% endif %}
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/z"
+              >Ir a la parte WEBZ</a>
+          </li> -->
         </ul>
       </div>
     </div>

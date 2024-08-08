@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% block content %} {% load static %}
+{% extends 'webtemp/base.html' %} 
+
+{% block content %} 
+{% load static %}
 <div class="container" id="home">
   <h1>{{ mensaje }}</h1>
   <hr />
@@ -7,13 +10,13 @@
     <div class="col">
       <div class="card">
         <img
-          src="https://www.recetasnestle.com.ar/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/919838d8da6d04b4cfaa1b121eeddce2.jpg"
+          src={{p.url}}
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">{{p.name}}</h5>
-          <p class="card-text">{{p.url}}</p>
+          <p class="card-text">{{p.descripcion}}</p>
         </div>
       </div>
     </div>

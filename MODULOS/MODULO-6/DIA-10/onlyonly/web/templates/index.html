@@ -13,7 +13,7 @@
             {{ flan.name }}
           </h5>
           <p class="card-text">
-            {{ flan.description | slice:":50" }}{% if flan.description | length > 50 %}...{% endif %}
+            {{ flan.description | slice:":50" }}{% if flan.description|length > 50 %}...{% endif %}
           </p>
         </div>
       </div>

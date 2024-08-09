@@ -9,17 +9,11 @@ class Flan(models.Model):
     slug = models.SlugField()
     is_private = models.BooleanField()
 
+class ContactForm(models.Model):
+    contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False)
+    customer_email = models.EmailField()
+    customer_name = models.CharField(max_length=64)
+    message = models.TextField()
     
-#*REG-EXP -> 
-"""
-Flan que contenga los siguientes 
-atributos:
-● flan_uuid del tipo UUIDField
-● name del tipo CharField (largo máximo 64 caracteres)
-● description del tipo TextField
-● image_url del tipo URLField
-● slug del tipo SlugField
-● is_private del tipo BooleanField
-"""
-# class ContactForm(models.Model):
-#     pass
+    def __str__(self):
+        return self.customer_name

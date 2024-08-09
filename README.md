@@ -254,3 +254,17 @@ Fecha es desde 24/09 al 30/09
 ### Enlace encuesta de cada día
 
 https://forms.gle/m4UkmSVECYhTMQqGA
+
+---
+
+Pepe
+Curso47-1
+
+Juana
+Curso47-1
+
+Flan
+url =
+"https://www.simplyrecipes.com/thmb/yhUtjBiaGRwSN4MpRn_-HgDgtb0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Flan-LEAD-3-91932581d0a549b9b51421db0d93983a.jpg"
+
+uuid = cc9d2b0e-d7cf-44c1-8c17-b7ad8ffdbbc4

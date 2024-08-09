@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+<!-- Esta VISTA es cual muestra los productos exclusivos para usuarios registrados -->
+{% block content %}
+<div class="container">
+  <div class="row mt-4 mb-4" id="productos">
+    {% for flan in private_flans %}
+    <div class="col-6 col-md-3">
+      <div class="card mb-4" styles="" id="producto">
+        <img src="{{ flan.image_url }}" class="card-img-top" id="card_img_top" alt="..." height="180px">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{ flan.name }}
+          </h5>
+          <p class="card-text">
+            {{ flan.description|slice:":250" }}{% if flan.description|length > 350 %}...{% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

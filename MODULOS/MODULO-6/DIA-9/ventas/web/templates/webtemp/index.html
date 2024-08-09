@@ -3,20 +3,20 @@
 {% block content %} 
 {% load static %}
 <div class="container" id="home">
-  <h1>{{ mensaje }}</h1>
+  <!-- <h1>{{ mensaje }}</h1> -->
   <hr />
   <div class="row row-cols-1 row-cols-md-3 g-4">
-    {% for p in productos %}
+    {% for p in flanes_publicos %}
     <div class="col">
       <div class="card">
         <img
-          src={{p.url}}
+          src={{p.image_url}}
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">{{p.name}}</h5>
-          <p class="card-text">{{p.descripcion}}</p>
+          <p class="card-text">{{p.description}}</p>
         </div>
       </div>
     </div>

@@ -1,0 +1,41 @@
+body{
+  /* background-color: black; */
+}
+
+header img {
+  width: 100%;
+  height: 140px;
+}
+nav div{
+  display: flex;
+}
+#minav{
+  display: flex;
+}
+#minav li{
+  margin: 2px 20px;
+}
+#productos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+#producto img{
+width: 240px;
+height: 280px;
+}
+#producto {
+  margin: 12px 12px;
+  padding: 4px 18px;
+  background-color: rgb(195, 185, 239);
+  border-radius: 4px;
+  width: 240px;
+}
+
+/* style FORM CONTACTO */
+
+form {
+ 
+}
+
+

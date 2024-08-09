@@ -10,7 +10,11 @@ def indice(request):
 
     # flanes_all = Flan.objects.all()
     flanes_publicos = Flan.objects.filter(is_private=False)
-    return render(request, 'index.html', {'public_flans': flanes_publicos})
+    context = {
+        "mensaje": "hola",
+        "flanes_publicos": flanes_publicos
+    }
+    return render(request, 'index.html', context)
 
 
 def acerca(request):
@@ -19,16 +23,11 @@ def acerca(request):
 
 
 def bienvenido(request):
-    private_flans = [{"name": "flan 7", "image_url": "https://pbs.twimg.com/media/CA5u_1pWYAE6FK0.jpg", "description": "flan 7"},
-                     {"name": "flan 8", "image_url": "https://pbs.twimg.com/media/CA5u_1pWYAE6FK0.jpg", "description": "flan 8"},]
-
-    return render(
-        request,
-        'welcome.html',
-        {
-            'private_flans': private_flans
-        }
-    )
+    # private_flans = [{"name": "flan 7", "image_url": "https://pbs.twimg.com/media/CA5u_1pWYAE6FK0.jpg", "description": "flan 7"},
+    #                  {"name": "flan 8", "image_url": "https://pbs.twimg.com/media/CA5u_1pWYAE6FK0.jpg", "description": "flan 8"},]
+    # return render(request,'welcome.html',{'private_flans': private_flans})
+    private_flans = Flan.objects.filter(is_private=True)
+    return render(request, 'welcome.html', {"private_flans": private_flans})
 
 # *  <!-- apply FORM contacto -->
 

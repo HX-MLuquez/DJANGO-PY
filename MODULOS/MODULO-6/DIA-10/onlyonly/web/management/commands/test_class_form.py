@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-# from web.forms import ContactFormForm, ContactModelForm
+from web.forms import ContactFormForm
 
 class Command(BaseCommand):
     help = 'Test form creation and validation'
@@ -8,7 +8,8 @@ class Command(BaseCommand):
         self.function_test_form()
 
     def function_test_form(self):  
-       pass
+       formA = ContactFormForm({"customer_email": "kiki@gamial.com", "customer_name": "Kiki", "message": "Hola soy Kiki"})
+       print(f'01 {formA}')
 
 #* ContactForm.objects.create(**form.cleaned_data) <- sintaxis simple y adecuada para crear en la db
 
